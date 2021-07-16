@@ -1,0 +1,21 @@
+diff -r -U 3 minecraft\net\minecraft\util\ThreadSafeBoundList.java minecraft_patched\net\minecraft\util\ThreadSafeBoundList.java
+--- minecraft\net\minecraft\util\ThreadSafeBoundList.java
++++ minecraft_patched\net\minecraft\util\ThreadSafeBoundList.java
+@@ -13,7 +13,7 @@
+ 
+    public ThreadSafeBoundList(Class<? extends T> p_i1126_1_, int p_i1126_2_) {
+       this.field_152760_b = p_i1126_1_;
+-      this.field_152759_a = (Object[])((Object[])Array.newInstance(p_i1126_1_, p_i1126_2_));
++      this.field_152759_a = (T[])Array.newInstance(p_i1126_1_, p_i1126_2_);
+    }
+ 
+    public T func_152757_a(T p_152757_1_) {
+@@ -36,7 +36,7 @@
+    }
+ 
+    public T[] func_152756_c() {
+-      T[] at = (Object[])((Object[])Array.newInstance(this.field_152760_b, this.field_152762_d));
++      T[] at = (T[])((Object[])Array.newInstance(this.field_152760_b, this.field_152762_d));
+       this.field_152761_c.readLock().lock();
+ 
+       for(int i = 0; i < this.field_152762_d; ++i) {

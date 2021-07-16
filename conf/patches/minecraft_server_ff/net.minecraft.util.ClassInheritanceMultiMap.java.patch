@@ -1,0 +1,30 @@
+diff -r -U 3 minecraft_server\net\minecraft\util\ClassInheritanceMultiMap.java minecraft_server_patched\net\minecraft\util\ClassInheritanceMultiMap.java
+--- minecraft_server\net\minecraft\util\ClassInheritanceMultiMap.java
++++ minecraft_server_patched\net\minecraft\util\ClassInheritanceMultiMap.java
+@@ -65,7 +65,7 @@
+    private void func_181743_a(T p_181743_1_, Class<?> p_181743_2_) {
+       List<T> list = (List)this.field_180218_a.get(p_181743_2_);
+       if(list == null) {
+-         this.field_180218_a.put(p_181743_2_, Lists.newArrayList(new Object[]{p_181743_1_}));
++         this.field_180218_a.put(p_181743_2_, Lists.newArrayList(p_181743_1_));
+       } else {
+          list.add(p_181743_1_);
+       }
+@@ -73,7 +73,7 @@
+    }
+ 
+    public boolean remove(Object p_remove_1_) {
+-      T t = p_remove_1_;
++      T t = (T)p_remove_1_;
+       boolean flag = false;
+ 
+       for(Class<?> oclass : this.field_180216_b) {
+@@ -107,7 +107,7 @@
+    }
+ 
+    public Iterator<T> iterator() {
+-      return this.field_181745_e.isEmpty()?Iterators.emptyIterator():Iterators.unmodifiableIterator(this.field_181745_e.iterator());
++      return this.field_181745_e.isEmpty()?Iterators.<T>emptyIterator():Iterators.unmodifiableIterator(this.field_181745_e.iterator());
+    }
+ 
+    public int size() {

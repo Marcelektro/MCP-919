@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\entity\ai\EntityAIAvoidEntity.java minecraft_patched\net\minecraft\entity\ai\EntityAIAvoidEntity.java
+--- minecraft\net\minecraft\entity\ai\EntityAIAvoidEntity.java
++++ minecraft_patched\net\minecraft\entity\ai\EntityAIAvoidEntity.java
+@@ -49,7 +49,7 @@
+       if(list.isEmpty()) {
+          return false;
+       } else {
+-         this.field_75376_d = (Entity)list.get(0);
++         this.field_75376_d = list.get(0);
+          Vec3 vec3 = RandomPositionGenerator.func_75461_b(this.field_75380_a, 16, 7, new Vec3(this.field_75376_d.field_70165_t, this.field_75376_d.field_70163_u, this.field_75376_d.field_70161_v));
+          if(vec3 == null) {
+             return false;

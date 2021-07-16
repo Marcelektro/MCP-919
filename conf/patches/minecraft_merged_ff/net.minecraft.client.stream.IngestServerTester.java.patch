@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft\net\minecraft\client\stream\IngestServerTester.java minecraft_patched\net\minecraft\client\stream\IngestServerTester.java
+--- minecraft\net\minecraft\client\stream\IngestServerTester.java
++++ minecraft_patched\net\minecraft\client\stream\IngestServerTester.java
+@@ -206,6 +206,7 @@
+       }
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    public void func_153041_j() {
+       if(!this.func_153032_e() && this.field_153047_e != IngestServerTester.IngestTestState.Uninitalized) {
+          if(!this.field_176008_y && !this.field_176007_z) {

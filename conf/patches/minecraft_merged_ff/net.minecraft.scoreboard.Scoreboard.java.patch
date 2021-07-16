@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\scoreboard\Scoreboard.java minecraft_patched\net\minecraft\scoreboard\Scoreboard.java
+--- minecraft\net\minecraft\scoreboard\Scoreboard.java
++++ minecraft_patched\net\minecraft\scoreboard\Scoreboard.java
+@@ -52,7 +52,7 @@
+ 
+    public Collection<ScoreObjective> func_96520_a(IScoreObjectiveCriteria p_96520_1_) {
+       Collection<ScoreObjective> collection = (Collection)this.field_96543_b.get(p_96520_1_);
+-      return collection == null?Lists.newArrayList():Lists.newArrayList(collection);
++      return collection == null?Lists.<ScoreObjective>newArrayList():Lists.newArrayList(collection);
+    }
+ 
+    public boolean func_178819_b(String p_178819_1_, ScoreObjective p_178819_2_) {

@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\server\management\UserList.java minecraft_patched\net\minecraft\server\management\UserList.java
+--- minecraft\net\minecraft\server\management\UserList.java
++++ minecraft_patched\net\minecraft\server\management\UserList.java
+@@ -170,7 +170,7 @@
+ 
+          for(UserListEntry<K> userlistentry : collection) {
+             if(userlistentry.func_152640_f() != null) {
+-               this.field_152696_d.put(this.func_152681_a(userlistentry.func_152640_f()), userlistentry);
++               this.field_152696_d.put(this.func_152681_a(userlistentry.func_152640_f()), (V)userlistentry);
+             }
+          }
+       }

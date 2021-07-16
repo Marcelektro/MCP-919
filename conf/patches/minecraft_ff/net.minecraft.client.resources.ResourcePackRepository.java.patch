@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\client\resources\ResourcePackRepository.java minecraft_patched\net\minecraft\client\resources\ResourcePackRepository.java
+--- minecraft\net\minecraft\client\resources\ResourcePackRepository.java
++++ minecraft_patched\net\minecraft\client\resources\ResourcePackRepository.java
+@@ -98,7 +98,7 @@
+    }
+ 
+    private List<File> func_110614_g() {
+-      return this.field_110618_d.isDirectory()?Arrays.asList(this.field_110618_d.listFiles(field_110622_a)):Collections.emptyList();
++      return this.field_110618_d.isDirectory()?Arrays.asList(this.field_110618_d.listFiles(field_110622_a)):Collections.<File>emptyList();
+    }
+ 
+    public void func_110611_a() {

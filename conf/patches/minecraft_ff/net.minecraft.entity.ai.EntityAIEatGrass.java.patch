@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\entity\ai\EntityAIEatGrass.java minecraft_patched\net\minecraft\entity\ai\EntityAIEatGrass.java
+--- minecraft\net\minecraft\entity\ai\EntityAIEatGrass.java
++++ minecraft_patched\net\minecraft\entity\ai\EntityAIEatGrass.java
+@@ -13,7 +13,7 @@
+ import net.minecraft.world.World;
+ 
+ public class EntityAIEatGrass extends EntityAIBase {
+-   private static final Predicate<IBlockState> field_179505_b = BlockStateHelper.func_177638_a(Blocks.field_150329_H).func_177637_a(BlockTallGrass.field_176497_a, Predicates.<V>equalTo(BlockTallGrass.EnumType.GRASS));
++   private static final Predicate<IBlockState> field_179505_b = BlockStateHelper.func_177638_a(Blocks.field_150329_H).func_177637_a(BlockTallGrass.field_176497_a, Predicates.equalTo(BlockTallGrass.EnumType.GRASS));
+    private EntityLiving field_151500_b;
+    private World field_151501_c;
+    int field_151502_a;

@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft_server\net\minecraft\block\BlockTripWireHook.java minecraft_server_patched\net\minecraft\block\BlockTripWireHook.java
+--- minecraft_server\net\minecraft\block\BlockTripWireHook.java
++++ minecraft_server_patched\net\minecraft\block\BlockTripWireHook.java
+@@ -196,6 +196,7 @@
+       }
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    public void func_180654_a(IBlockAccess p_180654_1_, BlockPos p_180654_2_) {
+       float f = 0.1875F;
+       switch((EnumFacing)p_180654_1_.func_180495_p(p_180654_2_).func_177229_b(field_176264_a)) {

@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft_server\net\minecraft\world\gen\layer\GenLayer.java minecraft_server_patched\net\minecraft\world\gen\layer\GenLayer.java
+--- minecraft_server\net\minecraft\world\gen\layer\GenLayer.java
++++ minecraft_server_patched\net\minecraft\world\gen\layer\GenLayer.java
+@@ -72,7 +72,7 @@
+       GenLayer genlayer6 = GenLayerZoom.func_75915_a(1000L, lvt_9_1_, 2);
+       GenLayerBiomeEdge genlayerbiomeedge = new GenLayerBiomeEdge(1000L, genlayer6);
+       GenLayer lvt_10_1_ = GenLayerZoom.func_75915_a(1000L, genlayerriverinit, 2);
+-      GenLayerHills genlayerhills = new GenLayerHills(1000L, genlayerbiomeedge, lvt_10_1_);
++      GenLayer genlayerhills = new GenLayerHills(1000L, genlayerbiomeedge, lvt_10_1_);
+       GenLayer genlayer5 = GenLayerZoom.func_75915_a(1000L, genlayerriverinit, 2);
+       genlayer5 = GenLayerZoom.func_75915_a(1000L, genlayer5, j);
+       GenLayerRiver genlayerriver = new GenLayerRiver(1L, genlayer5);

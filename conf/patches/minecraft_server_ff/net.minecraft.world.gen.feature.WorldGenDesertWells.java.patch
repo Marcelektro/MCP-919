@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft_server\net\minecraft\world\gen\feature\WorldGenDesertWells.java minecraft_server_patched\net\minecraft\world\gen\feature\WorldGenDesertWells.java
+--- minecraft_server\net\minecraft\world\gen\feature\WorldGenDesertWells.java
++++ minecraft_server_patched\net\minecraft\world\gen\feature\WorldGenDesertWells.java
+@@ -14,7 +14,7 @@
+ import net.minecraft.world.gen.feature.WorldGenerator;
+ 
+ public class WorldGenDesertWells extends WorldGenerator {
+-   private static final BlockStateHelper field_175913_a = BlockStateHelper.func_177638_a(Blocks.field_150354_m).func_177637_a(BlockSand.field_176504_a, Predicates.<V>equalTo(BlockSand.EnumType.SAND));
++   private static final BlockStateHelper field_175913_a = BlockStateHelper.func_177638_a(Blocks.field_150354_m).func_177637_a(BlockSand.field_176504_a, Predicates.equalTo(BlockSand.EnumType.SAND));
+    private final IBlockState field_175911_b = Blocks.field_150333_U.func_176223_P().func_177226_a(BlockStoneSlab.field_176556_M, BlockStoneSlab.EnumType.SAND).func_177226_a(BlockSlab.field_176554_a, BlockSlab.EnumBlockHalf.BOTTOM);
+    private final IBlockState field_175912_c = Blocks.field_150322_A.func_176223_P();
+    private final IBlockState field_175910_d = Blocks.field_150358_i.func_176223_P();

@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft_server\net\minecraft\item\ItemSlab.java minecraft_server_patched\net\minecraft\item\ItemSlab.java
+--- minecraft_server\net\minecraft\item\ItemSlab.java
++++ minecraft_server_patched\net\minecraft\item\ItemSlab.java
+@@ -63,7 +63,7 @@
+       if(iblockstate.func_177230_c() == this.field_150949_c) {
+          Comparable comparable = iblockstate.func_177229_b(this.field_150949_c.func_176551_l());
+          if(comparable == p_180615_4_) {
+-            IBlockState iblockstate1 = this.field_179226_c.func_176223_P().func_177226_a(this.field_150949_c.func_176551_l(), comparable);
++            IBlockState iblockstate1 = this.field_179226_c.func_176223_P().func_177226_a((IProperty)this.field_150949_c.func_176551_l(), comparable);
+             if(p_180615_2_.func_72855_b(this.field_179226_c.func_180640_a(p_180615_2_, p_180615_3_, iblockstate1)) && p_180615_2_.func_180501_a(p_180615_3_, iblockstate1, 3)) {
+                p_180615_2_.func_72908_a((double)((float)p_180615_3_.func_177958_n() + 0.5F), (double)((float)p_180615_3_.func_177956_o() + 0.5F), (double)((float)p_180615_3_.func_177952_p() + 0.5F), this.field_179226_c.field_149762_H.func_150496_b(), (this.field_179226_c.field_149762_H.func_150497_c() + 1.0F) / 2.0F, this.field_179226_c.field_149762_H.func_150494_d() * 0.8F);
+                --p_180615_1_.field_77994_a;

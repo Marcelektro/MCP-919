@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft\net\minecraft\client\gui\stream\GuiStreamUnavailable.java minecraft_patched\net\minecraft\client\gui\stream\GuiStreamUnavailable.java
+--- minecraft\net\minecraft\client\gui\stream\GuiStreamUnavailable.java
++++ minecraft_patched\net\minecraft\client\gui\stream\GuiStreamUnavailable.java
+@@ -79,6 +79,7 @@
+       super.func_73863_a(p_73863_1_, p_73863_2_, p_73863_3_);
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    protected void func_146284_a(GuiButton p_146284_1_) throws IOException {
+       if(p_146284_1_.field_146124_l) {
+          if(p_146284_1_.field_146127_k == 1) {

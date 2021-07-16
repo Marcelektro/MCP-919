@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft_server\net\minecraft\item\ItemHoe.java minecraft_server_patched\net\minecraft\item\ItemHoe.java
+--- minecraft_server\net\minecraft\item\ItemHoe.java
++++ minecraft_server_patched\net\minecraft\item\ItemHoe.java
+@@ -23,6 +23,7 @@
+       this.func_77637_a(CreativeTabs.field_78040_i);
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    public boolean func_180614_a(ItemStack p_180614_1_, EntityPlayer p_180614_2_, World p_180614_3_, BlockPos p_180614_4_, EnumFacing p_180614_5_, float p_180614_6_, float p_180614_7_, float p_180614_8_) {
+       if(!p_180614_2_.func_175151_a(p_180614_4_.func_177972_a(p_180614_5_), p_180614_5_, p_180614_1_)) {
+          return false;

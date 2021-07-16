@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft\net\minecraft\block\BlockCocoa.java minecraft_patched\net\minecraft\block\BlockCocoa.java
+--- minecraft\net\minecraft\block\BlockCocoa.java
++++ minecraft_patched\net\minecraft\block\BlockCocoa.java
+@@ -68,6 +68,7 @@
+       return super.func_180646_a(p_180646_1_, p_180646_2_);
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    public void func_180654_a(IBlockAccess p_180654_1_, BlockPos p_180654_2_) {
+       IBlockState iblockstate = p_180654_1_.func_180495_p(p_180654_2_);
+       EnumFacing enumfacing = (EnumFacing)iblockstate.func_177229_b(field_176387_N);

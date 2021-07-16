@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\client\gui\GuiPageButtonList.java minecraft_patched\net\minecraft\client\gui\GuiPageButtonList.java
+--- minecraft\net\minecraft\client\gui\GuiPageButtonList.java
++++ minecraft_patched\net\minecraft\client\gui\GuiPageButtonList.java
+@@ -285,7 +285,7 @@
+ 
+       public EditBoxEntry(int p_i45534_1_, String p_i45534_2_, boolean p_i45534_3_, Predicate<String> p_i45534_4_) {
+          super(p_i45534_1_, p_i45534_2_, p_i45534_3_);
+-         this.field_178951_a = (Predicate)Objects.firstNonNull(p_i45534_4_, Predicates.<T>alwaysTrue());
++         this.field_178951_a = (Predicate)Objects.firstNonNull(p_i45534_4_, Predicates.alwaysTrue());
+       }
+ 
+       public Predicate<String> func_178950_a() {

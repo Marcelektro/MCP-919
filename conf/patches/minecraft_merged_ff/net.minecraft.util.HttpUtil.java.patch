@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\util\HttpUtil.java minecraft_patched\net\minecraft\util\HttpUtil.java
+--- minecraft\net\minecraft\util\HttpUtil.java
++++ minecraft_patched\net\minecraft\util\HttpUtil.java
+@@ -222,7 +222,7 @@
+             }
+          }
+       });
+-      return listenablefuture;
++      return (ListenableFuture<Object>) listenablefuture;
+    }
+ 
+    @SideOnly(Side.CLIENT)

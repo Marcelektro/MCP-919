@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft_server\net\minecraft\network\play\server\S42PacketCombatEvent.java minecraft_server_patched\net\minecraft\network\play\server\S42PacketCombatEvent.java
+--- minecraft_server\net\minecraft\network\play\server\S42PacketCombatEvent.java
++++ minecraft_server_patched\net\minecraft\network\play\server\S42PacketCombatEvent.java
+@@ -17,6 +17,7 @@
+    public S42PacketCombatEvent() {
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    public S42PacketCombatEvent(CombatTracker p_i45970_1_, S42PacketCombatEvent.Event p_i45970_2_) {
+       this.field_179776_a = p_i45970_2_;
+       EntityLivingBase entitylivingbase = p_i45970_1_.func_94550_c();

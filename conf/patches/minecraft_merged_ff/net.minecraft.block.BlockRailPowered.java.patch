@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft\net\minecraft\block\BlockRailPowered.java minecraft_patched\net\minecraft\block\BlockRailPowered.java
+--- minecraft\net\minecraft\block\BlockRailPowered.java
++++ minecraft_patched\net\minecraft\block\BlockRailPowered.java
+@@ -24,6 +24,7 @@
+       this.func_180632_j(this.field_176227_L.func_177621_b().func_177226_a(field_176568_b, BlockRailBase.EnumRailDirection.NORTH_SOUTH).func_177226_a(field_176569_M, Boolean.valueOf(false)));
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    protected boolean func_176566_a(World p_176566_1_, BlockPos p_176566_2_, IBlockState p_176566_3_, boolean p_176566_4_, int p_176566_5_) {
+       if(p_176566_5_ >= 8) {
+          return false;

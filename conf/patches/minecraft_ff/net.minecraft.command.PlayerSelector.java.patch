@@ -1,0 +1,82 @@
+diff -r -U 3 minecraft\net\minecraft\command\PlayerSelector.java minecraft_patched\net\minecraft\command\PlayerSelector.java
+--- minecraft\net\minecraft\command\PlayerSelector.java
++++ minecraft_patched\net\minecraft\command\PlayerSelector.java
+@@ -126,7 +126,7 @@
+ 
+    private static List<Predicate<Entity>> func_179663_a(Map<String, String> p_179663_0_, String p_179663_1_) {
+       List<Predicate<Entity>> list = Lists.<Predicate<Entity>>newArrayList();
+-      final String s = func_179651_b(p_179663_0_, "type");
++      String s = func_179651_b(p_179663_0_, "type");
+       final boolean flag = s != null && s.startsWith("!");
+       if(flag) {
+          s = s.substring(1);
+@@ -143,9 +143,10 @@
+             });
+          }
+       } else {
+-         list.add(new Predicate<Entity>() {
+-            public boolean apply(Entity p_apply_1_) {
+-               return EntityList.func_180123_a(p_apply_1_, s) != flag;
++    	 final String s_f = s;
++    	 list.add(new Predicate<Entity>() {
++            public boolean apply(Entity p_apply_1_) {
++               return EntityList.func_180123_a(p_apply_1_, s_f) != flag;
+             }
+          });
+       }
+@@ -194,13 +195,14 @@
+ 
+    private static List<Predicate<Entity>> func_179659_d(Map<String, String> p_179659_0_) {
+       List<Predicate<Entity>> list = Lists.<Predicate<Entity>>newArrayList();
+-      final String s = func_179651_b(p_179659_0_, "team");
++      String s = func_179651_b(p_179659_0_, "team");
+       final boolean flag = s != null && s.startsWith("!");
+       if(flag) {
+          s = s.substring(1);
+       }
+ 
+       if(s != null) {
++    	 final String s_f = s;
+          list.add(new Predicate<Entity>() {
+             public boolean apply(Entity p_apply_1_) {
+                if(!(p_apply_1_ instanceof EntityLivingBase)) {
+@@ -209,7 +211,7 @@
+                   EntityLivingBase entitylivingbase = (EntityLivingBase)p_apply_1_;
+                   Team team = entitylivingbase.func_96124_cp();
+                   String s1 = team == null?"":team.func_96661_b();
+-                  return s1.equals(s) != flag;
++                  return s1.equals(s_f) != flag;
+                }
+             }
+          });
+@@ -265,16 +267,17 @@
+ 
+    private static List<Predicate<Entity>> func_179647_f(Map<String, String> p_179647_0_) {
+       List<Predicate<Entity>> list = Lists.<Predicate<Entity>>newArrayList();
+-      final String s = func_179651_b(p_179647_0_, "name");
++      String s = func_179651_b(p_179647_0_, "name");
+       final boolean flag = s != null && s.startsWith("!");
+       if(flag) {
+          s = s.substring(1);
+       }
+ 
+       if(s != null) {
+-         list.add(new Predicate<Entity>() {
+-            public boolean apply(Entity p_apply_1_) {
+-               return p_apply_1_.func_70005_c_().equals(s) != flag;
++    	 final String s_f = s;
++    	 list.add(new Predicate<Entity>() {
++            public boolean apply(Entity p_apply_1_) {
++               return p_apply_1_.func_70005_c_().equals(s_f) != flag;
+             }
+          });
+       }
+@@ -398,7 +401,7 @@
+ 
+       Entity entity = p_179658_2_.func_174793_f();
+       if(entity != null && p_179658_3_.isAssignableFrom(entity.getClass()) && i == 1 && ((List)p_179658_0_).contains(entity) && !"r".equals(p_179658_4_)) {
+-         p_179658_0_ = Lists.newArrayList(new Entity[]{entity});
++         p_179658_0_ = Lists.newArrayList((T)entity);
+       }
+ 
+       if(i != 0) {

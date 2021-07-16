@@ -1,0 +1,12 @@
+diff -r -U 3 minecraft\net\minecraft\util\Cartesian.java minecraft_patched\net\minecraft\util\Cartesian.java
+--- minecraft\net\minecraft\util\Cartesian.java
++++ minecraft_patched\net\minecraft\util\Cartesian.java
+@@ -43,7 +43,7 @@
+       }
+ 
+       public List<T> apply(Object[] p_apply_1_) {
+-         return Arrays.<T>asList((Object[])p_apply_1_);
++         return Arrays.<T>asList((T[])p_apply_1_);
+       }
+    }
+ 

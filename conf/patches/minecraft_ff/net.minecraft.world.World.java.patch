@@ -1,0 +1,34 @@
+diff -r -U 3 minecraft\net\minecraft\world\World.java minecraft_patched\net\minecraft\world\World.java
+--- minecraft\net\minecraft\world\World.java
++++ minecraft_patched\net\minecraft\world\World.java
+@@ -2148,8 +2148,8 @@
+       List<T> list = Lists.<T>newArrayList();
+ 
+       for(Entity entity : this.field_72996_f) {
+-         if(p_175644_1_.isAssignableFrom(entity.getClass()) && p_175644_2_.apply(entity)) {
+-            list.add(entity);
++         if(p_175644_1_.isAssignableFrom(entity.getClass()) && p_175644_2_.apply((T)entity)) {
++            list.add((T)entity);
+          }
+       }
+ 
+@@ -2160,8 +2160,8 @@
+       List<T> list = Lists.<T>newArrayList();
+ 
+       for(Entity entity : this.field_73010_i) {
+-         if(p_175661_1_.isAssignableFrom(entity.getClass()) && p_175661_2_.apply(entity)) {
+-            list.add(entity);
++         if(p_175661_1_.isAssignableFrom(entity.getClass()) && p_175661_2_.apply((T)entity)) {
++            list.add((T)entity);
+          }
+       }
+ 
+@@ -2196,7 +2196,7 @@
+       double d0 = Double.MAX_VALUE;
+ 
+       for(int i = 0; i < list.size(); ++i) {
+-         T t1 = (Entity)list.get(i);
++         T t1 = list.get(i);
+          if(t1 != p_72857_3_ && EntitySelectors.field_180132_d.apply(t1)) {
+             double d1 = p_72857_3_.func_70068_e(t1);
+             if(d1 <= d0) {

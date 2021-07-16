@@ -1,0 +1,21 @@
+diff -r -U 3 minecraft_server\net\minecraft\inventory\ContainerPlayer.java minecraft_server_patched\net\minecraft\inventory\ContainerPlayer.java
+--- minecraft_server\net\minecraft\inventory\ContainerPlayer.java
++++ minecraft_server_patched\net\minecraft\inventory\ContainerPlayer.java
+@@ -32,14 +32,15 @@
+          }
+       }
+ 
+-      for(final int k = 0; k < 4; ++k) {
++      for(int k = 0; k < 4; ++k) {
++    	 final int k_f = k;
+          this.func_75146_a(new Slot(p_i1819_1_, p_i1819_1_.func_70302_i_() - 1 - k, 8, 8 + k * 18) {
+             public int func_75219_a() {
+                return 1;
+             }
+ 
+             public boolean func_75214_a(ItemStack p_75214_1_) {
+-               return p_75214_1_ == null?false:(p_75214_1_.func_77973_b() instanceof ItemArmor?((ItemArmor)p_75214_1_.func_77973_b()).field_77881_a == k:(p_75214_1_.func_77973_b() != Item.func_150898_a(Blocks.field_150423_aK) && p_75214_1_.func_77973_b() != Items.field_151144_bL?false:k == 0));
++               return p_75214_1_ == null?false:(p_75214_1_.func_77973_b() instanceof ItemArmor?((ItemArmor)p_75214_1_.func_77973_b()).field_77881_a == k_f:(p_75214_1_.func_77973_b() != Item.func_150898_a(Blocks.field_150423_aK) && p_75214_1_.func_77973_b() != Items.field_151144_bL?false:k_f == 0));
+             }
+          });
+       }

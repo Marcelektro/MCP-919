@@ -1,0 +1,19 @@
+diff -r -U 3 minecraft_server\net\minecraft\entity\player\EntityPlayer.java minecraft_server_patched\net\minecraft\entity\player\EntityPlayer.java
+--- minecraft_server\net\minecraft\entity\player\EntityPlayer.java
++++ minecraft_server_patched\net\minecraft\entity\player\EntityPlayer.java
+@@ -988,6 +988,7 @@
+       return this.field_146106_i;
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    public EntityPlayer.EnumStatus func_180469_a(BlockPos p_180469_1_) {
+       if(!this.field_70170_p.field_72995_K) {
+          if(this.func_70608_bn() || !this.func_70089_S()) {
+@@ -1054,6 +1055,7 @@
+       return EntityPlayer.EnumStatus.OK;
+    }
+ 
++   @SuppressWarnings("incomplete-switch")
+    private void func_175139_a(EnumFacing p_175139_1_) {
+       this.field_71079_bU = 0.0F;
+       this.field_71089_bV = 0.0F;

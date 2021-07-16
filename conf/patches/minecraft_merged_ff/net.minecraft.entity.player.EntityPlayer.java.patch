@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft\net\minecraft\entity\player\EntityPlayer.java minecraft_patched\net\minecraft\entity\player\EntityPlayer.java
+--- minecraft\net\minecraft\entity\player\EntityPlayer.java
++++ minecraft_patched\net\minecraft\entity\player\EntityPlayer.java
+@@ -81,6 +81,7 @@
+ import net.minecraftforge.fml.relauncher.Side;
+ import net.minecraftforge.fml.relauncher.SideOnly;
+ 
++@SuppressWarnings("incomplete-switch")
+ public abstract class EntityPlayer extends EntityLivingBase {
+    public InventoryPlayer field_71071_by = new InventoryPlayer(this);
+    private InventoryEnderChest field_71078_a = new InventoryEnderChest();

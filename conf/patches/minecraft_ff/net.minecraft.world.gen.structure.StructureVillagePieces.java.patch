@@ -1,0 +1,11 @@
+diff -r -U 3 minecraft\net\minecraft\world\gen\structure\StructureVillagePieces.java minecraft_patched\net\minecraft\world\gen\structure\StructureVillagePieces.java
+--- minecraft\net\minecraft\world\gen\structure\StructureVillagePieces.java
++++ minecraft_patched\net\minecraft\world\gen\structure\StructureVillagePieces.java
+@@ -29,6 +29,7 @@
+ import net.minecraft.world.gen.structure.StructureBoundingBox;
+ import net.minecraft.world.gen.structure.StructureComponent;
+ 
++@SuppressWarnings("incomplete-switch")
+ public class StructureVillagePieces {
+    public static void func_143016_a() {
+       MapGenStructureIO.func_143031_a(StructureVillagePieces.House1.class, "ViBH");
